@@ -90,12 +90,13 @@
     position: absolute;
     width: 4vmin;
     height: 4vmin;
-    top: 22vmin;
+    top: 24vmin;
     left: 16vmin;
     border-radius: 50%;
     background: transparent;
     border-top: 1vmin solid #000;
     transform: rotate(180deg);
+    animation: boo 5s infinite;
 }
 
 .whitePart {
@@ -111,7 +112,36 @@
 
 .phantomLeftArm {
     position: absolute;
-    width: 9vmin;
-    height: 12vmin;
-    
+    width: 6vmin;
+    height: 8vmin;
+    top: 45vmin;
+    right: 45vmin;
+    border-radius: 0% 0% 50% 50%;
+    background: transparent;
+    border-left: 0.4vmin solid #000;
+    border-right: 0.4vmin solid #000;
+    border-bottom: 0.4vmin solid #000;
+    transform: rotate(-45deg);
+}
+
+.phantomRightArm {
+    position: absolute;
+    width: 6vmin;
+    height: 8vmin;
+    top: 45vmin;
+    left: 44vmin;
+    border-radius: 0% 0% 50% 50%;
+    background: transparent;
+    border-left: 0.4vmin solid #000;
+    border-right: 0.4vmin solid #000;
+    border-bottom: 0.4vmin solid #000;
+    transform: rotate(45deg);
+}
+
+/* Mouth Animation */
+
+@keyframes boo {
+    0% {border-top: 1vmin solid #000;}
+    50% {border-top: 6vmin solid #000;}
+    100% {border-top: 1vmin solid #000;}
 }
