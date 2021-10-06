@@ -11,7 +11,7 @@
     align-items: center;
     background-color: #557174;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 .circle {
@@ -34,12 +34,18 @@
     background-color: #F7F7E8;
 }
 
-.phantomBottomSides {
+.phantomBottom {
     position: absolute;
-    width: 12vmin;
+    width: 36vmin;
     height: 10vmin;
     top: 57vmin;
-    right: 46vmin;
+    display: flex;
+}
+
+.phantomBottomSides {
+    display: inline-block;
+    width: 12vmin;
+    height: 10vmin;
     border-bottom-left-radius: 6vmin;
     border-bottom-right-radius: 6vmin;
     background-color: #F7F7E8;
@@ -47,10 +53,11 @@
 }
 
 .phantomBottomCentre {
-    position: absolute;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
     width: 12vmin;
     height: 10vmin;
-    top: 57vmin;
     border-bottom-left-radius: 6vmin;
     border-bottom-right-radius: 6vmin;
     background-color: #F7F7E8;
@@ -103,12 +110,22 @@
     box-shadow: 10vmin 0 #fff;
 }
 
-.phantomLeftArm {
+.phantomArms {
+    margin: 0;
+    padding: 0;
     position: absolute;
+    width: 36vmin;
+    height: 10vmin;
+    top: 45vmin;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.phantomArms .phantomLeftArm {
+    display: inline-block;
     width: 6vmin;
     height: 8vmin;
-    top: 45vmin;
-    right: 45vmin;
     border-radius: 0% 0% 50% 50%;
     background: transparent;
     border-left: 0.4vmin solid #000;
@@ -117,12 +134,10 @@
     transform: rotate(-45deg);
 }
 
-.phantomRightArm {
-    position: absolute;
+.phantomArms .phantomRightArm {
+    display: inline-block;
     width: 6vmin;
     height: 8vmin;
-    top: 45vmin;
-    left: 44vmin;
     border-radius: 0% 0% 50% 50%;
     background: transparent;
     border-left: 0.4vmin solid #000;
